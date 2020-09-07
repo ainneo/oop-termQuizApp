@@ -1,0 +1,118 @@
+/* using varibales css */
+:root{
+    --main-bg-color: #1a1a1a;
+    --accent-color: rgb(197, 194, 194);
+    --main-theme-color: #66FF00;
+    --main-font: Arial, Helvetica, sans-serif;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body{
+    background: var(--main-bg-color );
+    color: var(--accent-color);
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+section{
+    text-align: center;
+    display: block;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px var(--accent-color) solid;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+
+.button{
+    width: 45%;
+    background: grey;
+    padding: 1rem 3rem;
+    border: 0;
+    text-align:center;
+    transition: 0.3s all ease;
+}
+
+.button:hover{
+    color: var(--main-theme-color);
+}
+
+.questions-box, .buttons{
+    text-align: center;
+}
+
+h1, h4{
+    padding: 1rem
+}
+
+.main-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+li{
+    padding: .3rem;
+    margin: .5rem;
+    width: 45%;
+    text-align: center;
+    list-style-type: none;
+    background: grey;
+    color:black
+}
+
+.tagline{
+    padding: 1rem
+}
+
+.progressBarInner{
+    height: 10px;
+    width: 0%;
+    background: var(--main-theme-color);
+    border-right: 1px var(--main-theme-color) solid
+}
+/*selects elements inside of <label>, <i> and <p>,
+the padding 2rem, pads the area to be clicked on to select
+the over the image and text*/
+.label{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* REMOVES RADIO BUTTONS */
+.choices input{
+    opacity: 0;
+}
+
+/* when input is checked, we want the label to have these styles */
+.choices input:checked + label{
+   color: var(--main-theme-color);
+}
+/* when the input box is checked set background image of*/
+.choices input:checked + label i{
+   background-image: url("../images/circle-filled.png");
+}
+
+/* when input box is NOT checked, the background image is set too:*/
+.choices label i{
+   background-image: url("../images/circle-outline.png");
+   background-size: 20px;
+   height: 20px;
+   width: 20px;
+}  
+
